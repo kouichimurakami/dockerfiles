@@ -21,7 +21,6 @@ RUN apt-get update -qq && apt-get -y install \
         texinfo \
         wget \
         zlib1g-dev
-#       curl
 #ffmpegのディレクトリ作成
 RUN mkdir -p ~/ffmpeg_sources ~/bin && \
 #NASMをインストール
@@ -89,8 +88,6 @@ RUN cd ~/ffmpeg_sources && \
     PATH="$HOME/bin:$PATH" make && \
     make install && \
     hash -r
-#-dev開発環境ツールをインストール
-#RUN apt-get install -y libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
 #python3とnumpyをインストール
 RUN apt-get install -y python3-dev python3-numpy
 #C++をマルチスレッドで動かす
