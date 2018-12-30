@@ -87,7 +87,7 @@ RUN cd ~/ffmpeg_sources && \
     --enable-nonfree && \
     PATH="$HOME/bin:$PATH" make && \
     make install && \
-    hash -r
+    hash -r \
 #python3とnumpyをインストール
 RUN apt-get install -y python3-dev python3-numpy
 #C++をマルチスレッドで動かす
@@ -96,6 +96,5 @@ RUN apt-get install -y libtbb2 libtbb-dev
 RUN apt-get install -y libjpeg-dev libpng16-dev libtiff5-dev libjasper-dev
 #IEE1394規格に準拠したカメラ
 RUN apt-get install -y libdc1394-22-dev
-#C++のGTK+ライブラリを利用できる
-#RUN curl http://ftp.gnome.org/pub/gnome/sources/gtk+/3.20/gtk+-3.20.0.tar.xz && tar xfv gtk+-3.20.0.tar.xz
-#RUN cd gtk+-3.20.0 && ./configure && make && make install
+#GTK+3.0をインストール
+#RUN apt install -y libgtk-3-dev
