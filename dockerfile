@@ -104,4 +104,4 @@ RUN apt-get install -y libxft-dev libpango1.0-dev
 RUN apt-get install -y libgtk3.0 #libgtk-3-dev libpng++-devi
 #OPEN-CVをインストール
 RUN wget https://github.com/opencv/opencv/archive/3.3.0.tar.gz && tar zxvf 3.3.0.tar.gz && cd opencv-3.3.0
-RUN git clone https://gist.github.com/0aea057af98dcf5a838da23becfdffbe.git && ls -al  && cp /0aea057af98dcf5a838da23becfdffbe/opencv3.2_build-ubuntu16.04.sh /opencv-3.3.0/opencv3.2_build-ubuntu16.04.sh && ls -al && cd opencv-3.3.0 && ls -al && sh opencv3.2_build-ubuntu16.04.sh && cd build && make && make install
+RUN git clone https://gist.github.com/0aea057af98dcf5a838da23becfdffbe.git && ls -al  && cp /0aea057af98dcf5a838da23becfdffbe/opencv3.2_build-ubuntu16.04.sh /opencv-3.3.0/opencv3.3_build-ubuntu16.04.sh && ls -al && cd opencv-3.3.0 && ls -al && sh opencv3.3_build-ubuntu16.04.sh && cd build && make && make install
